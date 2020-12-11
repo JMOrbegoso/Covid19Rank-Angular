@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CountryDetailComponent } from './country-detail/country-detail.component';
 import { NavHeaderComponent } from './nav-header/nav-header.component';
 import { AppFooterComponent } from './app-footer/app-footer.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AppFooterComponent } from './app-footer/app-footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
