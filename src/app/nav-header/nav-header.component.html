@@ -1,1 +1,24 @@
-<p>nav-header works!</p>
+<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+    <a class="navbar-brand" href="">Covid-19 Rank</a>
+  
+    <button class="navbar-toggler navbar-toggler-right" type="button" aria-controls="appNavigation" aria-expanded="!isCollapsed" aria-label="Toggle navigation" (click)="toggleMenu()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="appNavigation" [ngbCollapse]="isCollapsed">
+      <div class="navbar-nav mr-auto">
+
+        <a class="nav-item nav-link" (click)="toggleMenu()" routerLinkActive="active" routerLink="/country/peru">Perú</a>
+        <a class="nav-item nav-link" (click)="toggleMenu()" routerLinkActive="active" routerLink="/country/chile">Chile</a>
+        <a class="nav-item nav-link" (click)="toggleMenu()" routerLinkActive="active" routerLink="/country/ecuador">Ecuador</a>
+        <a class="nav-item nav-link" (click)="toggleMenu()" routerLinkActive="active" routerLink="/country/argentina">Argentina</a>
+        <a class="nav-item nav-link" (click)="toggleMenu()" routerLinkActive="active" routerLink="/country/colombia">Colombia</a>
+        <a class="nav-item nav-link" (click)="toggleMenu()" routerLinkActive="active" routerLink="/country/bolivia">Bolivia</a>
+        <a class="nav-item nav-link" (click)="toggleMenu()" routerLinkActive="active" routerLink="/country/venezuela">Venezuela</a>
+        <a class="nav-item nav-link" (click)="toggleMenu()" routerLinkActive="active" routerLink="/country/uruguay">Uruguay</a>
+        <a class="nav-item nav-link" (click)="toggleMenu()" routerLinkActive="active" routerLink="/country/paraguay">Paraguay</a>
+        <a class="nav-item nav-link" (click)="toggleMenu()" routerLinkActive="active" routerLink="/country/brazil">Brasil</a>
+
+      </div>
+    </div>
+  </nav>

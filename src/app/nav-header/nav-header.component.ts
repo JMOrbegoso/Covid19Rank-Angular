@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavHeaderComponent implements OnInit {
 
+  public isCollapsed = true;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleMenu() : void {
+    this.isCollapsed = !this.isCollapsed;
   }
 
 }
