@@ -8,13 +8,15 @@ import { NavHeaderComponent } from './nav-header/nav-header.component';
 import { AppFooterComponent } from './app-footer/app-footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { RankComponent } from './rank/rank.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CountryDetailComponent,
     NavHeaderComponent,
-    AppFooterComponent
+    AppFooterComponent,
+    RankComponent
   ],
   imports: [
     BrowserModule,
