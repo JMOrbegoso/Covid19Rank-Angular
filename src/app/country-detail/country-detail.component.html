@@ -1,1 +1,13 @@
-<country-info-table [country]="this.country"></country-info-table>
+<div class="container">
+    <div class="row">
+        <dov class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <country-info-table [country]="this.country"></country-info-table>
+        </dov>
+        <dov class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <historical-lethality-line-chart [countryHistorical]="this.countryHistorical"></historical-lethality-line-chart>
+        </dov>
+        <dov class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <historical-line-chart [countryHistorical]="this.countryHistorical"></historical-line-chart>
+        </dov>
+    </div>
+</div>
