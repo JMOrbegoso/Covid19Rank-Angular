@@ -18,8 +18,8 @@ export class Covid19DataService {
     return this.httpClient.get<Country[]>("https://disease.sh/v2/countries?yesterday=false");
    }
 
-   getCountry(countryName: string): Observable<Country[]>{
-    return this.httpClient.get<Country[]>("https://disease.sh/v2/countries/" + countryName + "?yesterday=true");
+   getCountry(countryName: string): Observable<Country>{
+    return this.httpClient.get<Country>("https://disease.sh/v2/countries/" + countryName + "?yesterday=true");
    }
 
    getCountryHistorical(countryName: string): Observable<CountryHistorical>{
