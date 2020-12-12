@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ChartsModule } from 'ng2-charts';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,6 +36,7 @@ import { HistoricalLineChartComponent } from './historical-line-chart/historical
     AppRoutingModule,
     NgbModule,
     FontAwesomeModule,
+    ChartsModule,
     HttpClientModule,
   ],
   providers: [Covid19DataService],
