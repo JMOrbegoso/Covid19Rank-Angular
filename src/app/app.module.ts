@@ -16,6 +16,8 @@ import { NavHeaderComponent } from './nav-header/nav-header.component';
 import { AppFooterComponent } from './app-footer/app-footer.component';
 import { RankComponent } from './rank/rank.component';
 import { CountryInfoTableComponent } from './country-info-table/country-info-table.component';
+import { HistoricalLethalityLineChartComponent } from './historical-lethality-line-chart/historical-lethality-line-chart.component';
+import { HistoricalLineChartComponent } from './historical-line-chart/historical-line-chart.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { CountryInfoTableComponent } from './country-info-table/country-info-tab
     AppFooterComponent,
     RankComponent,
     CountryInfoTableComponent,
+    HistoricalLethalityLineChartComponent,
+    HistoricalLineChartComponent,
   ],
   imports: [
     BrowserModule,
