@@ -15,6 +15,7 @@ import { CountryDetailComponent } from './country-detail/country-detail.componen
 import { NavHeaderComponent } from './nav-header/nav-header.component';
 import { AppFooterComponent } from './app-footer/app-footer.component';
 import { RankComponent } from './rank/rank.component';
+import { CountryInfoTableComponent } from './country-info-table/country-info-table.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { RankComponent } from './rank/rank.component';
     NavHeaderComponent,
     AppFooterComponent,
     RankComponent,
+    CountryInfoTableComponent,
   ],
   imports: [
     BrowserModule,
