@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Covid19DataService } from '../covid19-data.service';
+
 @Component({
   selector: 'app-nav-header',
   templateUrl: './nav-header.component.html',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavHeaderComponent implements OnInit {
 
-  public isCollapsed = true;
+  isCollapsed = true;
+  availableCountries : { [key: string]: string; } = {}
 
-  constructor() { }
+  constructor(private covid19DataService:Covid19DataService) {
+    this.availableCountries = covid19DataService.availableCountries;
+  }
 
   ngOnInit(): void {
   }
