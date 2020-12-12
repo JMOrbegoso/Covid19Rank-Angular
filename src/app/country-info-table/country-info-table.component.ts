@@ -9,7 +9,7 @@ import { Country } from '../covid19-data.types';
 })
 export class CountryInfoTableComponent implements OnInit {
 
-  @Input() country: Country | undefined;
+  @Input() country: Country | any;
 
   constructor() { }
 
