@@ -4,7 +4,7 @@
             <country-info-table [country]="this.country"></country-info-table>
         </div>
         <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6" *ngIf="this.countryHistorical">
-            <historical-line-chart [countryHistorical]="this.countryHistorical"></historical-line-chart>
+            <historical-line-chart [historicalData]="this.historicalData"></historical-line-chart>
         </div>
         <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6" *ngIf="this.countryHistorical">
             <historical-lethality-line-chart [countryHistorical]="this.countryHistorical"></historical-lethality-line-chart>
