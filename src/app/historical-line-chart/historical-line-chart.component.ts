@@ -52,9 +52,9 @@ export class HistoricalLineChartComponent implements OnInit, OnChanges {
 			data: {
 				labels: [...historicalData.keys()],
 				datasets: [
-					{ label: "infected", fill: false, backgroundColor: '#FF0000', borderColor: '#FF0000', data: [...historicalData.values()].map(item => item.infected), },
-					{ label: "deaths", fill: false, backgroundColor: '#000000', borderColor: '#000000', data: [...historicalData.values()].map(item => item.deceased ), },
-					{ label: "recovered", fill: false, backgroundColor: '#102EF3D9', borderColor: '#102EF3D9', data: [...historicalData.values()].map(item => item.recovered ), },
+					{ label: "Infectados", fill: false, backgroundColor: '#FFFFFF', borderColor: '#FF0000', data: [...historicalData.values()].map(item => item.infected), },
+					{ label: "Fallecidos", fill: false, backgroundColor: '#FFFFFF', borderColor: '#000000', data: [...historicalData.values()].map(item => item.deceased ), },
+					{ label: "Recuperados", fill: false, backgroundColor: '#FFFFFF', borderColor: '#102EF3D9', data: [...historicalData.values()].map(item => item.recovered ), },
 				],
 			},
 			options: options,
