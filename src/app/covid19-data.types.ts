@@ -44,3 +44,7 @@ export interface Timeline {
     deaths: { [date: string]: number; };
     recovered: { [date: string]: number; };
 }
+
+export class HistoricalValue {
+    constructor(public infected: number, public deceased: number, public recovered: number) { };
+}
