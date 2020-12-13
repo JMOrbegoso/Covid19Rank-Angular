@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Covid19DataService } from '../covid19-data.service';
 
-import { Country, CountryHistorical } from '../covid19-data.types';
+import { Country, CountryHistorical, HistoricalValue } from '../covid19-data.types';
+import { GetHistoricalData } from '../covid19-data.helpers';
 
 @Component({
   selector: 'country-detail',
@@ -13,6 +14,7 @@ export class CountryDetailComponent implements OnInit {
 
   country: Country | undefined;
   countryHistorical: CountryHistorical | undefined;
+  historicalData : Map<string, HistoricalValue> | undefined;
 
   constructor(private route:ActivatedRoute, private covid19DataService:Covid19DataService)
   {
@@ -26,6 +28,7 @@ export class CountryDetailComponent implements OnInit {
       this.covid19DataService.getCountryHistorical(params['countryName']).subscribe((countryHistorical:CountryHistorical) =>
       {
         this.countryHistorical = countryHistorical;
+        this.historicalData = GetHistoricalData(<CountryHistorical>this.countryHistorical);
       });
     });
   }
