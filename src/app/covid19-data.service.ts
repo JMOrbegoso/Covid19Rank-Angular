@@ -10,18 +10,18 @@ import { Country, CountryHistorical } from './covid19-data.types';
 })
 export class Covid19DataService {
 
-  availableCountries : { [key: string]: string; } = {
-    ['peru']:'Perú',
-    ['chile']:'Chile',
-    ['ecuador']:'Ecuador',
-    ['argentina']:'Argentina',
-    ['colombia']:'Colombia',
-    ['bolivia']:'Bolivia',
-    ['venezuela']:'Venezuela',
-    ['uruguay']:'Uruguay',
-    ['paraguay']:'Paraguay',
-    ['brazil']:'Brasil',
-  };
+  availableCountries = new Map<string, string>([
+    ['peru','Perú',],
+    ['chile','Chile',],
+    ['ecuador','Ecuador',],
+    ['argentina','Argentina',],
+    ['colombia','Colombia',],
+    ['bolivia','Bolivia',],
+    ['venezuela','Venezuela',],
+    ['uruguay','Uruguay',],
+    ['paraguay','Paraguay',],
+    ['brazil','Brasil',],
+  ]);
 
   constructor(private httpClient: HttpClient) {
    }

@@ -10,7 +10,7 @@ import { Covid19DataService } from '../covid19-data.service';
 export class NavHeaderComponent implements OnInit {
 
   isCollapsed = true;
-  availableCountries : { [key: string]: string; } = {}
+  availableCountries : Map<string, string>;
 
   constructor(private covid19DataService:Covid19DataService) {
     this.availableCountries = covid19DataService.availableCountries;
