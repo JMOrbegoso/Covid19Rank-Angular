@@ -26,7 +26,7 @@ export class HistoricalLineChartComponent implements OnInit, OnChanges {
 			this.chart.destroy();
 		}		
 
-		const context: HTMLCanvasElement = <HTMLCanvasElement>document.getElementById('canvas');
+		const context: HTMLCanvasElement = <HTMLCanvasElement>document.getElementById('canvas_historical_line_chart');
 
 		const historicalData : Map<string, HistoricalValue> = (<Map<string, HistoricalValue>>this.historicalData);
 
