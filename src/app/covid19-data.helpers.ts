@@ -1,4 +1,47 @@
-import { CountryHistorical, HistoricalValue } from './covid19-data.types';
+import { Country, CountryHistorical, HistoricalValue, RankValueEnum, RankHistoricalValue } from './covid19-data.types';
+
+function sortCountriesByRankValue(rankValueEnum : RankValueEnum, countries : Country[]) : [string, number][] {
+    switch(rankValueEnum){
+        case RankValueEnum.Infected:
+            return countries.sort((c1, c2) => c2.cases - c1.cases).map(c => [c.country, c.cases]);
+
+        case RankValueEnum.Recovered:
+            return countries.sort((c1, c2) => c2.recovered - c1.recovered).map(c => [c.country, c.recovered]);
+
+        case RankValueEnum.Deceased:
+            return countries.sort((c1, c2) => c2.deaths - c1.deaths).map(c => [c.country, c.deaths]);
+
+        case RankValueEnum.Tests:
+            return countries.sort((c1, c2) => c2.tests - c1.tests).map(c => [c.country, c.tests]);
+
+        case RankValueEnum.Lethality:
+            return countries.sort((c1, c2) => (c2.deaths / c2.cases) - (c1.deaths / c1.cases)).map(c => [c.country, (c.deaths / c.cases)]);
+
+        case RankValueEnum.CasesPerOneMillion:
+            return countries.sort((c1, c2) => c2.casesPerOneMillion - c1.casesPerOneMillion).map(c => [c.country, c.casesPerOneMillion]);
+
+        case RankValueEnum.DeathsPerOneMillion:
+            return countries.sort((c1, c2) => c2.deathsPerOneMillion - c1.deathsPerOneMillion).map(c => [c.country, c.deathsPerOneMillion]);
+
+        case RankValueEnum.TestsPerOneMillion:
+            return countries.sort((c1, c2) => c2.testsPerOneMillion - c1.testsPerOneMillion).map(c => [c.country, c.testsPerOneMillion]);
+    }
+}
+
+export function GetRankHistoricalValue(countries : Country[], availableCountries : string []) : Map<RankValueEnum, Map<string, number>> {
+    const rankValueEnums: RankValueEnum[] = [ RankValueEnum.Infected,
+                                              RankValueEnum.Deceased,
+                                              RankValueEnum.Recovered,
+                                              RankValueEnum.Tests,
+                                              RankValueEnum.Lethality,
+                                              RankValueEnum.CasesPerOneMillion,
+                                              RankValueEnum.DeathsPerOneMillion,
+                                              RankValueEnum.TestsPerOneMillion, ];
+    
+    const validCountries = countries.filter(c => availableCountries.includes(c.country.toLowerCase()));
+    
+    return new Map<RankValueEnum, Map<string, number>>(rankValueEnums.map(rankValue => [ rankValue, new Map<string, number>(sortCountriesByRankValue(rankValue, validCountries).map(c => [c[0], c[1]]))]));
+}
 
 export function GetHistoricalData(countryHistorical: CountryHistorical) : Map<string, HistoricalValue> {
 
