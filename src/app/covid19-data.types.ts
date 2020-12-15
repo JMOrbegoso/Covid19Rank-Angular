@@ -48,3 +48,30 @@ export interface Timeline {
 export class HistoricalValue {
     constructor(public infected: number, public deceased: number, public recovered: number) { };
 }
+
+export class RankHistoricalValue extends HistoricalValue
+{
+    constructor(
+        infected: number,
+        deceased: number,
+        recovered: number,
+        public tests : number,
+        public lethality : number,
+        public casesPerOneMillion : number,
+        public deathsPerOneMillion : number,
+        public testsPerOneMillion : number) {
+        super(infected, deceased, recovered);
+    }
+}
+
+export enum RankValueEnum
+{
+    Infected,
+    Deceased,
+    Recovered,
+    Tests,
+    Lethality,
+    CasesPerOneMillion,
+    DeathsPerOneMillion,
+    TestsPerOneMillion,
+}
