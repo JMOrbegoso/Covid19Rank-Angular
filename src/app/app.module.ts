@@ -15,7 +15,6 @@ import { Covid19DataService } from './covid19-data.service';
 import { CountryDetailComponent } from './country-detail/country-detail.component';
 import { NavHeaderComponent } from './nav-header/nav-header.component';
 import { AppFooterComponent } from './app-footer/app-footer.component';
-import { RankComponent } from './rank/rank.component';
 import { CountryInfoTableComponent } from './country-info-table/country-info-table.component';
 import { HistoricalLethalityLineChartComponent } from './historical-lethality-line-chart/historical-lethality-line-chart.component';
 import { HistoricalLineChartComponent } from './historical-line-chart/historical-line-chart.component';
@@ -26,7 +25,6 @@ import { HistoricalLineChartComponent } from './historical-line-chart/historical
     CountryDetailComponent,
     NavHeaderComponent,
     AppFooterComponent,
-    RankComponent,
     CountryInfoTableComponent,
     HistoricalLethalityLineChartComponent,
     HistoricalLineChartComponent,
