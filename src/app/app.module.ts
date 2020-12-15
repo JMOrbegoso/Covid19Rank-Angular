@@ -18,6 +18,7 @@ import { AppFooterComponent } from './app-footer/app-footer.component';
 import { CountryInfoTableComponent } from './country-info-table/country-info-table.component';
 import { HistoricalLethalityLineChartComponent } from './historical-lethality-line-chart/historical-lethality-line-chart.component';
 import { HistoricalLineChartComponent } from './historical-line-chart/historical-line-chart.component';
+import { LatinAmericanRankingComponent } from './latin-american-ranking/latin-american-ranking.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { HistoricalLineChartComponent } from './historical-line-chart/historical
     CountryInfoTableComponent,
     HistoricalLethalityLineChartComponent,
     HistoricalLineChartComponent,
+    LatinAmericanRankingComponent,
   ],
   imports: [
     BrowserModule,
