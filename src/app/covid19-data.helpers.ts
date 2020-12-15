@@ -22,3 +22,20 @@ export function GetHistoricalData(countryHistorical: CountryHistorical) : Map<st
         recoveredMap.has(date)? <number>recoveredMap.get(date) : 0,
     )]));
 };
+
+export function GetLethalityHistoricalData(countryHistorical: CountryHistorical) : Map<string, number> {
+
+    const casesArray : [string, number][] = Object.entries(countryHistorical.timeline.cases);
+    const deathsArray : [string, number][] = Object.entries(countryHistorical.timeline.deaths);
+
+    const casesMap = new Map(casesArray);
+    const deathsMap = new Map(deathsArray);
+    
+    const validDatesCases : string[] = [...[...casesArray].filter((c,d) => d !== 0).map(c => c[0])];			
+    const validDatesDeaths: string[] = [...[...deathsArray].filter((c,d) => d !== 0).map(c => c[0])];
+
+    const validDates = [...new Set([...validDatesCases , ...validDatesDeaths])];
+
+    return new Map<string, number>(validDates.map(date =>
+        [date, casesMap.has(date) && deathsMap.has(date) ? <number>casesMap.get(date) !== 0 ? 100 * <number>deathsMap.get(date) / <number>casesMap.get(date) : 0 : 0]));
+};
