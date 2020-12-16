@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, } from '@angular/core';
+import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
 
 import { Chart, ChartOptions, ChartData, ChartDataSets } from 'chart.js';
 
@@ -9,8 +9,9 @@ import { RankValueEnum } from '../covid19-data.types';
   templateUrl: './ranking-chart.component.html',
   styleUrls: ['./ranking-chart.component.css']
 })
-export class RankingChartComponent implements OnInit {
+export class RankingChartComponent implements OnInit, AfterViewInit {
 
+  @Input() canvasId : string = 'canvas';
   @Input() rankValue : RankValueEnum = RankValueEnum.Deceased;
   @Input() rankingData : Map<RankValueEnum, Map<string, number>> | undefined;
   
@@ -26,9 +27,12 @@ export class RankingChartComponent implements OnInit {
     }
     
     this.chartTitle = this.getChartTitle(this.rankValue);
+  }
 
-    const context: HTMLCanvasElement = <HTMLCanvasElement>document.getElementById('chartCanvas');
-
+  ngAfterViewInit(): void
+  {
+    const context: HTMLCanvasElement = <HTMLCanvasElement>document.getElementById(this.canvasId);
+    
     const rankingValues : Map<string, number> = <Map<string, number>>(<Map<RankValueEnum, Map<string, number>>>this.rankingData).get(this.rankValue);
 
 		const options : ChartOptions = {
