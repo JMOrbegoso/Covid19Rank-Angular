@@ -1,1 +1,28 @@
-<p>latin-american-ranking works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6" *ngIf="this.rankHistoricalValue">
+            <app-ranking-chart [rankValue]="this.localRankValueEnum.Infected" [rankingData]="this.rankHistoricalValue"></app-ranking-chart>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6" *ngIf="this.rankHistoricalValue">
+            <app-ranking-chart [rankValue]="this.localRankValueEnum.Deceased" [rankingData]="this.rankHistoricalValue"></app-ranking-chart>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6" *ngIf="this.rankHistoricalValue">
+            <app-ranking-chart [rankValue]="this.localRankValueEnum.Recovered" [rankingData]="this.rankHistoricalValue"></app-ranking-chart>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6" *ngIf="this.rankHistoricalValue">
+            <app-ranking-chart [rankValue]="this.localRankValueEnum.Lethality" [rankingData]="this.rankHistoricalValue"></app-ranking-chart>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6" *ngIf="this.rankHistoricalValue">
+            <app-ranking-chart [rankValue]="this.localRankValueEnum.Tests" [rankingData]="this.rankHistoricalValue"></app-ranking-chart>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6" *ngIf="this.rankHistoricalValue">
+            <app-ranking-chart [rankValue]="this.localRankValueEnum.CasesPerOneMillion" [rankingData]="this.rankHistoricalValue"></app-ranking-chart>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6" *ngIf="this.rankHistoricalValue">
+            <app-ranking-chart [rankValue]="this.localRankValueEnum.DeathsPerOneMillion" [rankingData]="this.rankHistoricalValue"></app-ranking-chart>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6" *ngIf="this.rankHistoricalValue">
+            <app-ranking-chart [rankValue]="this.localRankValueEnum.TestsPerOneMillion" [rankingData]="this.rankHistoricalValue"></app-ranking-chart>
+        </div>
+    </div>
+</div>
