@@ -56,6 +56,7 @@ export class RankingChartComponent implements OnInit, AfterViewInit {
       animation: {
         duration: 3000,
       },
+      maintainAspectRatio: false,
 		};
 
     const chartData : ChartData = {
