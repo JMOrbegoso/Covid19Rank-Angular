@@ -36,18 +36,26 @@ export class RankingChartComponent implements OnInit, AfterViewInit {
     const rankingValues : Map<string, number> = <Map<string, number>>(<Map<RankValueEnum, Map<string, number>>>this.rankingData).get(this.rankValue);
 
 		const options : ChartOptions = {
-      tooltips: {	enabled: true,	},
+      tooltips: {
+        enabled: true,
+        callbacks:{
+          title: () => this.getChartToolTipTitle(this.rankValue),
+        },
+      },
       responsive : true,
 			legend: {
 				display: true,
-				position: 'left',
+				position: 'bottom',
 				labels: { fontColor: 'black' },
-			},
+      },
 			scales: {
 				xAxes: [
 					{ ticks: { fontColor: "black", display: true, min: 0, autoSkip: false, }, },
 				],
-			},
+      },
+      animation: {
+        duration: 3000,
+      },
 		};
 
     const chartData : ChartData = {
@@ -88,6 +96,34 @@ export class RankingChartComponent implements OnInit, AfterViewInit {
 
       case RankValueEnum.TestsPerOneMillion:
           return "Ranking de países con mayor número de pruebas de COVID-19 por millón de habitantes";
+    }
+  }
+
+  getChartToolTipTitle(rankValue: RankValueEnum) : string{
+    switch(rankValue){
+      case RankValueEnum.Infected:
+        return "Número de infectados de COVID-19";
+
+      case RankValueEnum.Deceased:
+          return "Número de recuperados de COVID-19";
+
+      case RankValueEnum.Recovered:
+          return "Número de fallecimientos de COVID-19";
+
+      case RankValueEnum.Tests:
+          return "Ranking de países con mayor número de pruebas de COVID-19 realizadas";
+
+      case RankValueEnum.Lethality:
+          return "Letalidad del COVID-19";
+
+      case RankValueEnum.CasesPerOneMillion:
+          return "Número de infectados de COVID-19 por millón de habitantes";
+
+      case RankValueEnum.DeathsPerOneMillion:
+          return "Número de fallecimientos de COVID-19 por millón de habitantes";
+
+      case RankValueEnum.TestsPerOneMillion:
+          return "Número de pruebas de COVID-19 por millón de habitantes";
     }
   }
 
