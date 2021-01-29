@@ -78,10 +78,10 @@ export class RankingChartComponent implements OnInit, AfterViewInit {
         return "Ranking de países con mayor número de infectados de COVID-19";
 
       case RankValueEnum.Deceased:
-          return "Ranking de países con mayor número de recuperados de COVID-19";
+          return "Ranking de países con mayor número de fallecimientos de COVID-19";
 
       case RankValueEnum.Recovered:
-          return "Ranking de países con mayor número de fallecimientos de COVID-19";
+          return "Ranking de países con mayor número de recuperados de COVID-19";
 
       case RankValueEnum.Tests:
           return "Ranking de países con mayor número de pruebas de COVID-19 realizadas";
@@ -106,10 +106,10 @@ export class RankingChartComponent implements OnInit, AfterViewInit {
         return "Número de infectados de COVID-19";
 
       case RankValueEnum.Deceased:
-          return "Número de recuperados de COVID-19";
+          return "Número de fallecimientos de COVID-19";
 
       case RankValueEnum.Recovered:
-          return "Número de fallecimientos de COVID-19";
+          return "Número de recuperados de COVID-19";
 
       case RankValueEnum.Tests:
           return "Ranking de países con mayor número de pruebas de COVID-19 realizadas";
