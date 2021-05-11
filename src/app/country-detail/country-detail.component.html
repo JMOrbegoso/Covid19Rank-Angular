@@ -1,13 +1,23 @@
 <div class="container">
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" *ngIf="this.country">
-            <country-info-table [country]="this.country"></country-info-table>
-        </div>
-        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" *ngIf="this.historicalData">
-            <historical-line-chart [historicalData]="this.historicalData"></historical-line-chart>
-        </div>
-        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" *ngIf="this.lethalityHistoricalData">
-            <historical-lethality-line-chart [lethalityHistoricalData]="this.lethalityHistoricalData"></historical-lethality-line-chart>
-        </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" *ngIf="this.country">
+      <app-country-info-table [country]="this.country"></app-country-info-table>
     </div>
+    <div
+      class="col-sm-12 col-md-12 col-lg-12 col-xl-12"
+      *ngIf="this.historicalData"
+    >
+      <app-historical-line-chart
+        [historicalData]="this.historicalData"
+      ></app-historical-line-chart>
+    </div>
+    <div
+      class="col-sm-12 col-md-12 col-lg-12 col-xl-12"
+      *ngIf="this.lethalityHistoricalData"
+    >
+      <app-historical-lethality-line-chart
+        [lethalityHistoricalData]="this.lethalityHistoricalData"
+      ></app-historical-lethality-line-chart>
+    </div>
+  </div>
 </div>

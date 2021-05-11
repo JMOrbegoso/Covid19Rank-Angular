@@ -1,8 +1,9 @@
 <div class="container border border-primary" *ngIf="this.canvasId">
-    <div class="text-center">
-        <h3>{{ this.chartTitle }}</h3>
-    </div>
-    <div style="height: 360px">
-        <canvas id="{{canvasId}}">{{ chart }}</canvas>
-    </div>
+  <div class="text-center">
+    <h3>{{ this.chartTitle }}</h3>
+  </div>
+  <div style="height: 360px">
+    <canvas id="{{ canvasId }}">{{ chart }}</canvas>
+  </div>
 </div>
+

@@ -5,22 +5,19 @@ import { Covid19DataService } from '../covid19-data.service';
 @Component({
   selector: 'app-nav-header',
   templateUrl: './nav-header.component.html',
-  styleUrls: ['./nav-header.component.css']
+  styleUrls: ['./nav-header.component.css'],
 })
 export class NavHeaderComponent implements OnInit {
-
   isCollapsed = true;
-  availableCountries : Map<string, string>;
+  availableCountries: Map<string, string>;
 
-  constructor(private covid19DataService:Covid19DataService) {
+  constructor(private covid19DataService: Covid19DataService) {
     this.availableCountries = covid19DataService.availableCountries;
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  toggleMenu() : void {
+  toggleMenu(): void {
     this.isCollapsed = !this.isCollapsed;
   }
-
 }

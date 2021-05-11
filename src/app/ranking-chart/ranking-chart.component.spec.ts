@@ -8,9 +8,8 @@ describe('RankingChartComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RankingChartComponent ]
-    })
-    .compileComponents();
+      declarations: [RankingChartComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

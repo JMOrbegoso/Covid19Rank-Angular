@@ -8,9 +8,8 @@ describe('LatinAmericanRankingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LatinAmericanRankingComponent ]
-    })
-    .compileComponents();
+      declarations: [LatinAmericanRankingComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

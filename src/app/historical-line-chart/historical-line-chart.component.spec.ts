@@ -8,9 +8,8 @@ describe('HistoricalLineChartComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HistoricalLineChartComponent ]
-    })
-    .compileComponents();
+      declarations: [HistoricalLineChartComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

@@ -8,9 +8,8 @@ describe('HistoricalLethalityLineChartComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HistoricalLethalityLineChartComponent ]
-    })
-    .compileComponents();
+      declarations: [HistoricalLethalityLineChartComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

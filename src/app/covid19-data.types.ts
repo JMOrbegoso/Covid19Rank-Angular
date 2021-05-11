@@ -1,77 +1,80 @@
-export interface CountryInfo {
-        _id?: number;
-        iso2: string;
-        iso3: string;
-        lat: number;
-        long: number;
-        flag: string;
-    }
-    
-export interface Country {
-    updated: any;
-    country: string;
-    countryInfo: CountryInfo;
-    cases: number;
-    todayCases: number;
-    deaths: number;
-    todayDeaths: number;
-    recovered: number;
-    todayRecovered: number;
-    active: number;
-    critical: number;
-    casesPerOneMillion: number;
-    deathsPerOneMillion: number;
-    tests: number;
-    testsPerOneMillion: number;
-    population: number;
-    continent: string;
-    oneCasePerPeople: number;
-    oneDeathPerPeople: number;
-    oneTestPerPeople: number;
-    activePerOneMillion: number;
-    recoveredPerOneMillion: number;
-    criticalPerOneMillion: number;
+export interface CountryInfo {
+  _id?: number;
+  iso2: string;
+  iso3: string;
+  lat: number;
+  long: number;
+  flag: string;
+}
+
+export interface Country {
+  updated: any;
+  country: string;
+  countryInfo: CountryInfo;
+  cases: number;
+  todayCases: number;
+  deaths: number;
+  todayDeaths: number;
+  recovered: number;
+  todayRecovered: number;
+  active: number;
+  critical: number;
+  casesPerOneMillion: number;
+  deathsPerOneMillion: number;
+  tests: number;
+  testsPerOneMillion: number;
+  population: number;
+  continent: string;
+  oneCasePerPeople: number;
+  oneDeathPerPeople: number;
+  oneTestPerPeople: number;
+  activePerOneMillion: number;
+  recoveredPerOneMillion: number;
+  criticalPerOneMillion: number;
 }
 
 export interface CountryHistorical {
-    country: string;
-    province: string[];
-    timeline: Timeline;
+  country: string;
+  province: string[];
+  timeline: Timeline;
 }
 
 export interface Timeline {
-    cases: { [date: string]: number; };
-    deaths: { [date: string]: number; };
-    recovered: { [date: string]: number; };
+  cases: { [date: string]: number };
+  deaths: { [date: string]: number };
+  recovered: { [date: string]: number };
 }
 
 export class HistoricalValue {
-    constructor(public infected: number, public deceased: number, public recovered: number) { };
+  constructor(
+    public infected: number,
+    public deceased: number,
+    public recovered: number
+  ) {}
 }
 
-export class RankHistoricalValue extends HistoricalValue
-{
-    constructor(
-        infected: number,
-        deceased: number,
-        recovered: number,
-        public tests : number,
-        public lethality : number,
-        public casesPerOneMillion : number,
-        public deathsPerOneMillion : number,
-        public testsPerOneMillion : number) {
-        super(infected, deceased, recovered);
-    }
+export class RankHistoricalValue extends HistoricalValue {
+  constructor(
+    infected: number,
+    deceased: number,
+    recovered: number,
+    public tests: number,
+    public lethality: number,
+    public casesPerOneMillion: number,
+    public deathsPerOneMillion: number,
+    public testsPerOneMillion: number
+  ) {
+    super(infected, deceased, recovered);
+  }
 }
 
-export enum RankValueEnum
-{
-    Infected,
-    Deceased,
-    Recovered,
-    Tests,
-    Lethality,
-    CasesPerOneMillion,
-    DeathsPerOneMillion,
-    TestsPerOneMillion,
+export enum RankValueEnum {
+  Infected,
+  Deceased,
+  Recovered,
+  Tests,
+  Lethality,
+  CasesPerOneMillion,
+  DeathsPerOneMillion,
+  TestsPerOneMillion,
 }

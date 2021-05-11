@@ -1,28 +1,85 @@
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 p-4" *ngIf="this.rankHistoricalValue">
-            <app-ranking-chart [canvasId]="'canvasId1'" [rankValue]="this.localRankValueEnum.Infected" [rankingData]="this.rankHistoricalValue"></app-ranking-chart>
-        </div>
-        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 p-4" *ngIf="this.rankHistoricalValue">
-            <app-ranking-chart [canvasId]="'canvasId2'" [rankValue]="this.localRankValueEnum.Deceased" [rankingData]="this.rankHistoricalValue"></app-ranking-chart>
-        </div>
-        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 p-4" *ngIf="this.rankHistoricalValue">
-            <app-ranking-chart [canvasId]="'canvasId3'" [rankValue]="this.localRankValueEnum.Recovered" [rankingData]="this.rankHistoricalValue"></app-ranking-chart>
-        </div>
-        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 p-4" *ngIf="this.rankHistoricalValue">
-            <app-ranking-chart [canvasId]="'canvasId4'" [rankValue]="this.localRankValueEnum.Lethality" [rankingData]="this.rankHistoricalValue"></app-ranking-chart>
-        </div>
-        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 p-4" *ngIf="this.rankHistoricalValue">
-            <app-ranking-chart [canvasId]="'canvasId5'" [rankValue]="this.localRankValueEnum.Tests" [rankingData]="this.rankHistoricalValue"></app-ranking-chart>
-        </div>
-        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 p-4" *ngIf="this.rankHistoricalValue">
-            <app-ranking-chart [canvasId]="'canvasId6'" [rankValue]="this.localRankValueEnum.CasesPerOneMillion" [rankingData]="this.rankHistoricalValue"></app-ranking-chart>
-        </div>
-        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 p-4" *ngIf="this.rankHistoricalValue">
-            <app-ranking-chart [canvasId]="'canvasId7'" [rankValue]="this.localRankValueEnum.DeathsPerOneMillion" [rankingData]="this.rankHistoricalValue"></app-ranking-chart>
-        </div>
-        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 p-4" *ngIf="this.rankHistoricalValue">
-            <app-ranking-chart [canvasId]="'canvasId8'" [rankValue]="this.localRankValueEnum.TestsPerOneMillion" [rankingData]="this.rankHistoricalValue"></app-ranking-chart>
-        </div>
+  <div class="row">
+    <div
+      class="col-sm-12 col-md-12 col-lg-12 col-xl-6 p-4"
+      *ngIf="this.rankHistoricalValue"
+    >
+      <app-ranking-chart
+        [canvasId]="'canvasId1'"
+        [rankValue]="this.localRankValueEnum.Infected"
+        [rankingData]="this.rankHistoricalValue"
+      ></app-ranking-chart>
     </div>
+    <div
+      class="col-sm-12 col-md-12 col-lg-12 col-xl-6 p-4"
+      *ngIf="this.rankHistoricalValue"
+    >
+      <app-ranking-chart
+        [canvasId]="'canvasId2'"
+        [rankValue]="this.localRankValueEnum.Deceased"
+        [rankingData]="this.rankHistoricalValue"
+      ></app-ranking-chart>
+    </div>
+    <div
+      class="col-sm-12 col-md-12 col-lg-12 col-xl-6 p-4"
+      *ngIf="this.rankHistoricalValue"
+    >
+      <app-ranking-chart
+        [canvasId]="'canvasId3'"
+        [rankValue]="this.localRankValueEnum.Recovered"
+        [rankingData]="this.rankHistoricalValue"
+      ></app-ranking-chart>
+    </div>
+    <div
+      class="col-sm-12 col-md-12 col-lg-12 col-xl-6 p-4"
+      *ngIf="this.rankHistoricalValue"
+    >
+      <app-ranking-chart
+        [canvasId]="'canvasId4'"
+        [rankValue]="this.localRankValueEnum.Lethality"
+        [rankingData]="this.rankHistoricalValue"
+      ></app-ranking-chart>
+    </div>
+    <div
+      class="col-sm-12 col-md-12 col-lg-12 col-xl-6 p-4"
+      *ngIf="this.rankHistoricalValue"
+    >
+      <app-ranking-chart
+        [canvasId]="'canvasId5'"
+        [rankValue]="this.localRankValueEnum.Tests"
+        [rankingData]="this.rankHistoricalValue"
+      ></app-ranking-chart>
+    </div>
+    <div
+      class="col-sm-12 col-md-12 col-lg-12 col-xl-6 p-4"
+      *ngIf="this.rankHistoricalValue"
+    >
+      <app-ranking-chart
+        [canvasId]="'canvasId6'"
+        [rankValue]="this.localRankValueEnum.CasesPerOneMillion"
+        [rankingData]="this.rankHistoricalValue"
+      ></app-ranking-chart>
+    </div>
+    <div
+      class="col-sm-12 col-md-12 col-lg-12 col-xl-6 p-4"
+      *ngIf="this.rankHistoricalValue"
+    >
+      <app-ranking-chart
+        [canvasId]="'canvasId7'"
+        [rankValue]="this.localRankValueEnum.DeathsPerOneMillion"
+        [rankingData]="this.rankHistoricalValue"
+      ></app-ranking-chart>
+    </div>
+    <div
+      class="col-sm-12 col-md-12 col-lg-12 col-xl-6 p-4"
+      *ngIf="this.rankHistoricalValue"
+    >
+      <app-ranking-chart
+        [canvasId]="'canvasId8'"
+        [rankValue]="this.localRankValueEnum.TestsPerOneMillion"
+        [rankingData]="this.rankHistoricalValue"
+      ></app-ranking-chart>
+    </div>
+  </div>
 </div>
+

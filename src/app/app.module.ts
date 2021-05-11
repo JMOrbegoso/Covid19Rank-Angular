@@ -1,4 +1,3 @@
-import { RouterModule, Routes } from '@angular/router'
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -44,5 +43,4 @@ import { RankingChartComponent } from './ranking-chart/ranking-chart.component';
   providers: [Covid19DataService],
   bootstrap: [AppComponent],
 })
-
-export class AppModule { }
+export class AppModule {}
