@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', async () => {
     await page.navigateTo();
-    expect(await page.getTitleText()).toEqual('Covid19Rank-Angular app is running!');
+    expect(await page.getTitleText()).toEqual('covid19rank-angular app is running!');
   });
 
   afterEach(async () => {

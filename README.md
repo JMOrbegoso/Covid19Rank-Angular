@@ -1,6 +1,5 @@
 # Covid19RankAngular
 
-A replica of Covid19Rank Blazor project builded using Angular and TypeScript.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.12.
 
 ## Development server
