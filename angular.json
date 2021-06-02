@@ -115,10 +115,6 @@
               "devServerTarget": "covid19rank-angular:serve:production"
             }
           }
-        },
-        "deploy": {
-          "builder": "angular-cli-ghpages:deploy",
-          "options": {}
         }
       }
     }
